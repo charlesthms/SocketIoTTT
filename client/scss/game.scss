@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root{
+	--cell-size : 100px;
+	--mark-size: cal(var(--cell-size)* 0.9);
+	--back-color : rgb(255, 255, 255);
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: var(--back-color);
+	margin: 0;
+	padding: 0;
+}
+
+/*################################################################*/
+
+li, a{
+	font-weight: 500;
+	color: #edf0f1;
+	text-decoration: none;
+}
+
+header{
+	background-color: rgb(51, 51, 51);
+	height: 110px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 10%;
+}
+
+h1{
+	color: rgb(255, 255, 255);
+}
+
+.leave{
+	font-size: 16px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(61, 133, 214);
+	padding: 9px 25px;
+	border-radius: 50px;
+	transition: all 0.3s ease 0s;
+}
+
+.leave:hover{
+	background-color: rgb(32, 89, 155);
+}
+
+.score{
+	list-style: none;
+}
+
+.score li{
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+/*#########################PLATEAU#################################*/
+.plateau {
+	margin-top: 200px;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	grid-template-columns: repeat(3, auto);
+
+}
+
+.cell {
+	width: var(--cell-size);
+	height: var(--cell-size);
+	border: 1px solid rgb(0, 0, 0);
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.cell.x,
+.cell.o{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 110px;
+	cursor: not-allowed;
+}
+
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3){
+	border-top: none;
+}
+
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7){
+	border-bottom: none;
+}
+
+.cell:nth-child(3n+1){
+	border-left: none;
+}
+
+.cell:nth-child(3n+3){
+	border-right: none;
+}
+
+.win-mess{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .9);
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 5rem;
+	flex-direction: column;
+}
+
+.win-mess.show{
+	display: flex;
+}
+
+.win-mess button{
+	font-size: 3rem;
+	font-family: 'Quicksand', sans-serif;
+	background-color: white;
+	border: 1px solid black;
+	cursor: pointer;
+	padding: .25em 1.5em;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/dist/form.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+        <title>Morpion</title>
+    </head>
+    <body>
+        <div class="container">
+
+            <header class="header">
+                <h1>Accueil</h1>
+            </header>
+ 
+            <main class="main">
+                <form action="/game" class="form">
+                    <div class="user-info el">
+                        <label for="username">Nom d'utilisateur</label>
+                        <input type="text"
+                                name="username"
+                                id="username"
+                                placeholder="Nom d'utilisateur"
+                                required />
+                    </div>
+                    <div class="rooms el">
+                        <label for="classp">Choix du joueur</label>
+                        <select name="classp" id="classp">
+                            <option value="x">X</option>
+                            <option value="o">O</option>
+                        </select>
+                    </div>
+
+                    <div class="rooms el">
+                        <label for="room">Choix de la salle</label>
+                        <select name="room" id="room">
+                            <option value="1">Salle 1</option>
+                            <option value="2">Salle 2</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn">Rejoindre la salle !</button>
+                </form>
+            </main>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/form.js"></script>
+    </body>
+</html>

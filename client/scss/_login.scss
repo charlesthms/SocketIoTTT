@@ -1,0 +1,113 @@
+body {
+    background-color: $dark;
+    font-family: 'Poppins', sans-serif;
+
+    ul {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .btn:hover {
+        background-color: #555555;
+    }
+    
+    .container {
+        width: 30%;
+        height: 45vh;
+        margin: 250px auto;
+        color: #fff;
+        background-color: $light;
+        border-radius: 10px;
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: var(--dark-color-a);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .main {
+            padding: 0px 50px;
+
+            .form {
+                display: flex;
+                flex-direction: column;
+
+                & .el {
+                    margin: 1vh 0;
+                }
+
+                & label {
+                    display: block;
+                }
+
+                & .btn {
+                    cursor: pointer;
+                    padding: 9px 25px;
+                    background-color: $accent;
+                    color: #fff;
+                    border: 0;
+                    font-size: 17px;
+                    font-weight: 400;
+                    text-align: center;
+                    border-radius: 50px;
+                    transition: all 0.3s ease 0s;
+                    width: 70%;
+                    align-self: center;
+                    margin: 2vh 0;
+                }
+
+                & input[type='text'] {
+                    border: none;
+                    background-color: #22232a;
+                    border-radius: 10px;
+                    font-size: 15px;
+                    height: 4vh;
+                    width: 100%;
+                    padding-left: 1rem;
+                    color: white;
+                }
+
+                & select {
+                    background-color: #22232a;
+                    color: #fff;
+                    width: 100%;
+                    border: none;
+                    height: 4vh;
+                    border-radius: 10px;
+                    padding: 0 1rem;
+                }
+            }
+        }
+    }
+    
+    // .main label {
+    //     display: block;
+    //     margin-bottom: 5px;
+    //     margin-top: 10px;
+    // }
+    
+    // .main input[type='text'] {
+    //     font-size: 16px;
+    //     padding: 5px;
+    //     height: 40px;
+    //     width: 100%;
+    // }
+    
+    // .main select {
+    //     font-size: 16px;
+    //     padding: 5px;
+    //     height: 40px;
+    //     width: 100%;
+    // }
+    
+    // .main .btn {
+    //     margin-top: 20px;
+    //     width: 200px;
+    // }
+    
+}

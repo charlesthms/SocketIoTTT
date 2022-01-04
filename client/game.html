@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/dist/game.css">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <header>
+            <h1>MORPION</h1>
+            <nav>
+                <ul class="score" id="users"></ul>
+            </nav>
+            <h2><a href="/" class="leave">Quitter la partie</a></h2>
+        </header>
+
+        <div class="plateau" id="plateau">
+            <div class="cell" id="0" data-cell></div>
+            <div class="cell" id="1" data-cell></div>
+            <div class="cell" id="2" data-cell></div>  
+            <div class="cell" id="3" data-cell></div>
+            <div class="cell" id="4" data-cell></div>
+            <div class="cell" id="5" data-cell></div>  
+            <div class="cell" id="6" data-cell></div>
+            <div class="cell" id="7" data-cell></div>
+            <div class="cell" id="8" data-cell></div>  
+        </div>
+        
+        <div class="win-mess" id="win-mess">
+            <div win-message>win !</div>
+            <button id="rejouer">Rejouer</button>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/io.js"></script>
+        <script src="/js/game.js"></script>
+
+    </body>
+</html>
